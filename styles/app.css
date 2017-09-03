@@ -8,7 +8,9 @@ header {
   background-color: white;
 }
 
+
 /* Header */
+
 header.first {
   display: flex;
   flex-direction: row;
@@ -40,13 +42,13 @@ header.second {
   justify-content: center;
 }
 
-header.second>.info{
+header.second>.info {
   display: flex;
   padding: 4px 0 0 10px;
   font-size: 16pt;
 }
 
-header.second>.info i::before{
+header.second>.info i::before {
   color: gray;
 }
 
@@ -120,8 +122,8 @@ header.first i.icon-menu::before {
 }
 
 .avatar {
-  width: 35px;
-  height: 35px;
+  width: 28px;
+  height: 28px;
   border-radius: 50px;
   background: url("../assets/images/avatar.jpeg") no-repeat center;
   border: 1px solid #DFDFDF;
@@ -129,10 +131,10 @@ header.first i.icon-menu::before {
   cursor: pointer;
 }
 
-.avatar.secondary{
+.avatar.secondary {
   width: 28px;
   height: 28px;
-} 
+}
 
 .avatar:active {
   opacity: 0.5;
@@ -151,8 +153,8 @@ header.first i.icon-menu::before {
 
 .main .tasks {
   background-color: white;
-  width: 70%;
-  margin-top: 20px;
+  width: 55%;
+  margin: 20px 10px 0 20px;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -163,7 +165,8 @@ header.first i.icon-menu::before {
   justify-content: space-between;
 }
 
-.main .tasks header>button i::before {
+.main .tasks header>button i::before,
+.main .details header .group button i::before {
   color: gray;
   font-size: 16px;
 }
@@ -216,6 +219,84 @@ header.first i.icon-menu::before {
   right: 30px;
 }
 
+.main .details {
+  margin: 20px 20px 0 10px;
+  width: 45%;
+}
+
+.main .details header {
+  display: flex;
+  flex-direction: row;
+  padding: 8px 5px 8px 30px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.main .details header .group i.circle {
+  margin-top: 5px;
+}
+
+.main .details header .group i.circle:before {
+  color: #DFDFDF;
+}
+
+.main .details header .group .item {
+  color: #DFDFDF;
+  font-size: 12pt;
+  padding: 0 10px 0 10px;
+}
+
+.main .details header .group .item.date {
+  color: #DFDFDF;
+  font-size: 10pt;
+  padding: 0 10px 0 0;
+}
+
+.main .details header .group.icons {
+  padding-right: 90px;
+}
+
+.group .rounded {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  border: 1px gray solid;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.group .rounded.dotted {
+  border: 1px gray dashed;
+  border-radius: 50px;
+}
+
+.group .rounded i {
+  position: absolute;
+  top: 5px;
+  padding-left: 3px;
+}
+
+.group .rounded i::before {
+  color: gray;
+  font-size: 14pt;
+}
+
+.main .details header .group button i::before {
+  /* position: absolute;
+  top: 10px;
+  right: 10px; */
+}
+
+.main .details .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: inset 0px 1px 2px 0px #DFDFDF;
+  height: calc(100% - 46px);
+  background-color: white;
+}
+
 
 /* buttons */
 
@@ -239,8 +320,8 @@ button.outline {
   border-radius: 3px;
   color: rgb(48, 173, 242);
   background-color: white;
-  padding: 6px 6px;
-  font-weight: 400;
+  padding: 6px 10px;
+  font-weight: 500;
   cursor: pointer;
   height: 30px;
 }
