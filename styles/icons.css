@@ -1,0 +1,7 @@
+.icon-check {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../assets/icons/check.svg);
+  background-size: 20px 20px;
+}
