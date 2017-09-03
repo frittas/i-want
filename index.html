@@ -2,16 +2,96 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" type="text/css" href="./styles/reset.css">
   <link rel="stylesheet" type="text/css" href="./styles/app.css">
   <link rel="stylesheet" type="text/css" href="./styles/icons.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>I-Want</title>
 </head>
 
 <body>
-  <i class="icon-check"></i>
+  <header class="first">
+    <button class="icon">
+          <i class="icon-menu"></i>
+    </button>
+    <div class="header-wrapper">
+      <div class="group">
+        <div class="item">
+          <span>My Tasks</span>
+        </div>
+        <div class="item secondary">
+          <a href="#">Inbox</a>
+        </div>
+        <div class="item">
+
+          <button class="icon">
+                    <i class="icon-plus"></i>
+              </button>
+        </div>
+      </div>
+      <div class="search-container">
+        <input class="search" type="search" placeholder="Search">
+        <div class="icon">
+          <i class="icon-search"></i>
+        </div>
+      </div>
+      <div class="group">
+        <div class="item secondary">
+          <a href="#">Help</a>
+          <button class="icon">
+                    <i class="icon-chevron-down"></i>
+              </button>
+        </div>
+        <div class="item secondary">
+          <a href="#">Personal Projects</a>
+        </div>
+        <div class="item">
+          <div class="avatar"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <header class="second">
+    <div class="avatar secondary"></div>
+    <div class="info">
+      <h1>My Personal Tasks</h1>
+      <i class="icon-chevron-down"></i></div>
+
+
+  </header>
+  <div class="main">
+    <div class="tasks">
+      <header>
+        <button class="outline">
+          Add Task
+        </button>
+        <button class="icon">
+          <i class="icon-settings"></i>
+        </button>
+      </header>
+      <div class="content">
+        <ul>
+          <li>
+            <i class="icon-check check"></i>
+            <span> Work it harder</span>
+            <i class="icon-circle circle"></i>
+          </li>
+          <li>
+            <i class="icon-check check"></i>
+            <span>Make it better</span>
+            <i class="icon-circle circle"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="details">
+      <header></header>
+      <div class="content"></div>
+      <footer></footer>
+    </div>
+  </div>
 </body>
 
 </html>
