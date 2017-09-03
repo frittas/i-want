@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>I-Want</title>
+  <title>Quero!</title>
 </head>
 
 <body>
@@ -25,7 +25,6 @@
           <a href="#">Inbox</a>
         </div>
         <div class="item">
-
           <button class="icon">
                     <i class="icon-plus"></i>
               </button>
@@ -34,7 +33,7 @@
       <div class="search-container">
         <input class="search" type="search" placeholder="Search">
         <div class="icon">
-          <i class="icon-search"></i>
+          <i class="icon-magnify"></i>
         </div>
       </div>
       <div class="group">
@@ -58,13 +57,11 @@
     <div class="info">
       <h1>My Personal Tasks</h1>
       <i class="icon-chevron-down"></i></div>
-
-
   </header>
   <div class="main">
-    <div class="tasks">
+    <div class="tasks top-round">
       <header>
-        <button class="outline">
+        <button class="outline" onclick="addTask(this)">
           Add Task
         </button>
         <button class="icon">
@@ -72,21 +69,11 @@
         </button>
       </header>
       <div class="content">
-        <ul>
-          <li>
-            <i class="icon-check check"></i>
-            <span> Work it harder</span>
-            <i class="icon-circle circle"></i>
-          </li>
-          <li>
-            <i class="icon-check check"></i>
-            <span>Make it better</span>
-            <i class="icon-circle circle"></i>
-          </li>
+        <ul class="task-list">
         </ul>
       </div>
     </div>
-    <div class="details">
+    <div class="details hidden top-round">
       <header>
         <div class="group">
           <div class="avatar"></div>
@@ -116,17 +103,30 @@
           </div>
         </div>
         <div class="group">
-          <button class="icon">
+          <button class="icon" onclick="closeDetails()">
                 <i class="icon-close"></i>
               </button>
         </div>
       </header>
       <div class="content">
-        <div>content</div>
-        <footer>teste footer</footer>
-      </div>
+        <div class="content-wrapper">
+          <div>
+            <i class="icon-check check"></i>
+            <input id="title-input" type="text" placeholder="New Task" onblur="saveOnBlur()" onkeydown="saveOnEnter()">
+          </div>
+          <textarea id="description-textarea" cols="30" rows="10" placeholder="Description" onblur="saveOnBlur()"></textarea>
+        </div>
+        <footer>
+          <div class="avatar"></div>
+          <textarea cols="30" rows="10" id="comments-textarea" placeholder="Write a comment..." onblur="saveOnBlur()"></textarea>
+        </footer>
     </div>
   </div>
+  </div>
+  <script type="text/javascript" src="./js/context.js"></script>
+  <script type="text/javascript" src="./js/list-handler.js"></script>
+  <script type="text/javascript" src="./js/details-handler.js"></script>
+  <script type="text/javascript" src="./js/app.js"></script>
 </body>
 
 </html>
